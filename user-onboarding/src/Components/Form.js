@@ -1,11 +1,38 @@
 import React from 'react';
 
-const Form = (props) => {
+function Form(props) {
+    const {
+        values,
+        change,
+        submit,
+        disabled,
+        errors
+    } = props
+
+    const onChange = event => {
+        const { name, value, checked, type } = event.target
+        const valueToUse = type === 'checkbox' ? checked : value
+        change(name, valueToUse);
+    }
+
+    const onSubmit = event => {
+        event.preventDefault();
+        submit();
+    }
+
     return (
         <form className='form container' onSubmit={onSubmit}>
             <div className='form submit'>
                 <h2>Add New User</h2>
                 <button disabled={disabled}>Submit</button>
+            </div>
+
+            <div className='errors'>
+                <div>{errors.first_name}</div>
+                <div>{errors.last_name}</div>
+                <div>{errors.email}</div>
+                <div>{errors.password}</div>
+                <div>{errors.terms}</div>
             </div>
 
             <div className='form inputs'>
