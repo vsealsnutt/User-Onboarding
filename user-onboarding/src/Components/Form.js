@@ -33,58 +33,59 @@ function Form(props) {
                 <div>{errors.password}</div>
                 <div>{errors.terms}</div>
             </div>
+            <div className='form'>
+                <div className='form-inputs'>
+                    <label>First Name 
+                        <input
+                            type='text'
+                            name='first_name'
+                            placeholder='Enter First Name'
+                            value={values.first_name}
+                            onChange={onChange}
+                        />
+                    </label>
+                    <label>Last Name 
+                        <input
+                            type='text'
+                            name='last_name'
+                            placeholder='Enter Last Name'
+                            value={values.last_name}
+                            onChange={onChange}
+                        />
+                    </label>
+                    <label>Email 
+                        <input
+                            type='email'
+                            name='email'
+                            placeholder='Enter Email'
+                            value={values.email}
+                            onChange={onChange}
+                        />
+                    </label>
+                    <label>Password 
+                        <input
+                            type='password'
+                            name='password'
+                            placeholder='Type a Password'
+                            value={values.password}
+                            onChange={onChange}
+                        />
+                    </label>
+                </div>
 
-            <div className='form inputs'>
-                <label>First Name 
-                    <input
-                        type='text'
-                        name='first_name'
-                        placeholder='Enter First Name'
-                        value={values.first_name}
-                        onChange={onChange}
-                    />
-                </label>
-                <label>Last Name 
-                    <input
-                        type='text'
-                        name='last_name'
-                        placeholder='Enter Last Name'
-                        value={values.last_name}
-                        onChange={onChange}
-                    />
-                </label>
-                <label>Email 
-                    <input
-                        type='email'
-                        name='email'
-                        placeholder='Enter Email'
-                        value={values.email}
-                        onChange={onChange}
-                    />
-                </label>
-                <label>Password 
-                    <input
-                        type='password'
-                        name='password'
-                        placeholder='Type a Password'
-                        value={values.password}
-                        onChange={onChange}
-                    />
-                </label>
+                <div className='form-checkbox'>
+                    <label>Agree to Terms of Service 
+                        <input
+                            type='checkbox'
+                            name='terms'
+                            checked={values.terms}
+                            onChange={onChange}
+                        />
+                    </label>
+                </div>
             </div>
 
-            <div className='form checkbox'>
-                <label>Agree to Terms of Service 
-                    <input
-                        type='checkbox'
-                        name='terms'
-                        checked={values.terms}
-                        onChange={onChange}
-                    />
-                </label>
-            </div>
-
-            <div className='form submit'>
+            <div className='form-submit'>
                 <button disabled={disabled}>Create User</button>
             </div>
         </form>
