@@ -21,10 +21,9 @@ function Form(props) {
     }
 
     return (
-        <form className='form container' onSubmit={onSubmit}>
-            <div className='form submit'>
+        <form className='form-container' onSubmit={onSubmit}>
+            <div className='new-user-heading'>
                 <h2>Add New User</h2>
-                <button disabled={disabled}>Submit</button>
             </div>
 
             <div className='errors'>
@@ -83,6 +82,10 @@ function Form(props) {
                         onChange={onChange}
                     />
                 </label>
+            </div>
+
+            <div className='form submit'>
+                <button disabled={disabled}>Create User</button>
             </div>
         </form>
     )
