@@ -75,7 +75,7 @@ function Form(props) {
             </div>
 
             <div className='form checkbox'>
-                <label>Terms of Service 
+                <label>Agree to Terms of Service 
                     <input
                         type='checkbox'
                         name='terms'
